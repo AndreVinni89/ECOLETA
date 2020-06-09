@@ -29,17 +29,19 @@
                         <legend><h2>Dados da entidade</h2></legend>
                         <div class="field">
                             <label for="name">Nome da entidade</label>
-                            <input type="text" name="name">
+                            <input type="text" name="name" required>
 
                         </div>
 
                         <div class="field-group">
                             <div class="field">
-                                <label for="adress">Endereço</label><input type="text" name="adress">
+                                <label for="adress">Endereço</label>
+                                <input type="text" name="adress" required>
                             </div>
 
                             <div class="field">
-                                <label for="adress2">Número/Complemento</label><input type="text" name="adress2">
+                                <label for="adress2">Número/Complemento</label>
+                                <input type="text" name="adress2" required>
                             </div>
 
                         </div>
@@ -47,7 +49,7 @@
                         <div class="field-group">
                             <div class="field">
                                 <label for="state">Estado</label>
-                                <select name="uf">
+                                <select name="uf" required>
                                     <option value="">Selecione o Estado</option>
                                     
                                 </select>
@@ -56,19 +58,51 @@
 
                             <div class="field">
                                 <label for="city">Cidade</label>
-                                <select name="city" disabled>
+                                <select name="city" disabled required>
                                     <option value="">Selecione a Cidade</option>
                                 </select>
                             </div>
                         </div>
                     </fieldset>
 
-                    <!-- <fieldset>
+                    <fieldset>
                         <legend>
                             <h2>Ítens de coleta</h2>
                             <p>Selecione um ou mais itens abaixo</p>
-                        </legend> -->
-                        
+                        </legend>
+                        <div class="items-grid">
+                            <li data-id="1">
+                                <img src="styles/assets/lampadas.svg" alt="Lampadas">
+                                <span>Lâmpadas</span>
+                            </li>
+
+                            <li data-id="2">
+                                <img src="styles/assets/baterias.svg" alt="Pilhas e bateria">
+                                <span>Pilhas e Baterias</span>
+                            </li>
+
+                            <li data-id="3">
+                                <img src="styles/assets/papeis-papelao.svg" alt="Papeis e Papelão">
+                                <span>Papeis e Papelão</span>
+                            </li>
+
+                            <li data-id="4">
+                                <img src="styles/assets/eletronicos.svg" alt="Resíduos e Eletrônicos">
+                                <span>Resíduos e Eletrônicos</span>
+                            </li>
+
+                            <li data-id="5">
+                                <img src="styles/assets/organicos.svg" alt="Resíduos Orgãnicos">
+                                <span>Resíduos Orgãnicos</span>
+                            </li>
+
+                            <li data-id="6">
+                                <img src="styles/assets/oleo.svg" alt="Oléo de Cozinha">
+                                <span>Oléo de Cozinha</span>
+                            </li>
+
+                        </div>
+                        <input type="hidden" name="items" id="items" value="">
                     </fieldset>
 
                     <button type="submit">Cadastrar ponto de coleta</button>
