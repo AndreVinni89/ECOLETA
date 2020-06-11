@@ -58,25 +58,25 @@ module.exports = db
 //     // //Função que insere dados no DB
 //     // db.run(query, values, afterInsertData)
 
-//     //Consultar dados
-//     // db.all(`
-//     //     SELECT name FROM places`, function (err, rows) {//rows para retornar uma lista com os registros
-//     //     if (err) {
-//     //         return console.log(err)
-//     //     }
-//     //     console.log("Here are your registers: ")
-//     //     console.log(rows)
-//     // })
+    //Consultar dados
+    // db.all(`
+    //     SELECT * FROM places`, function (err, rows) {//rows para retornar uma lista com os registros
+    //     if (err) {
+    //         return console.log(err)
+    //     }
+    //     console.log("Here are your registers: ")
+    //     console.log(rows)
+    // })
 
-//     //Deletar dados
-//     // db.run(`
-//     //     DELETE FROM places WHERE ID = ?
+    //Deletar dados
+    // db.run(`
+    //     DELETE FROM places WHERE ID = ?
     
-//     // `, [1], function (err) {
-//     //     if (err) {
-//     //         console.log(err)
-//     //     }
-//     //     console.log(`Succesful delete register!`)
-//     // })
+    // `, [4], function (err) {
+    //     if (err) {
+    //         console.log(err)
+    //     }
+    //     console.log(`Succesful delete register!`)
+    // })
 // })
 
