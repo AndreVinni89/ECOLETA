@@ -72,7 +72,7 @@ module.exports = db
     // db.run(`
     //     DELETE FROM places WHERE ID = ?
     
-    // `, [9], function (err) {
+    // `, [12], function (err) {
     //     if (err) {
     //         console.log(err)
     //     }

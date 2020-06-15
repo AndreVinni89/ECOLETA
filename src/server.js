@@ -52,43 +52,7 @@ server.post("/save-point", (req, res) => {
         ) VALUES (?,?,?,?,?,?,?);
     `
 
-
     const body = req.body
-
-    // const statesNames = [
-    //     "Acre",
-    //     "Alagoas",
-    //     "Amapá",
-    //     "Amazonas",
-    //     "Bahia",
-    //     "Ceará",
-    //     "Distrito Federal",
-    //     "Espírito Santo",
-    //     "Goiás",
-    //     "Maranhão",
-    //     "Mato Grosso",
-    //     "Mato Grosso do Sul",
-    //     "Minas Gerais",
-    //     "Pará",
-    //     "Paraíba",
-    //     "Paraná",
-    //     "Pernambuco",
-    //     "Piauí",
-    //     "Rio de Janeiro",
-    //     "Rio Grande do Norte",
-    //     "Rio Grande do Sul",
-    //     "Rondônia",
-    //     "Roraima",
-    //     "Santa Catarina",
-    //     "São Paulo",
-    //     "Sergipe",
-    //     "Tocantins"]
-
-    // const state = statesNames[body.uf - 1]
-
-    // console.log('Estado = ', state)
-    // console.log('indice: ', body.uf - 1)
-
 
     const values = [
         body.image,
@@ -102,7 +66,8 @@ server.post("/save-point", (req, res) => {
 
     function afterInsertData(err) {
         if (err) {
-            return console.log(err)
+            console.log(err)
+            return res.send("Erro no cadastro!")
         }
         console.log("Succesful register")
         console.log(this)
@@ -111,14 +76,21 @@ server.post("/save-point", (req, res) => {
     //Função que insere dados no DB
     db.run(query, values, afterInsertData)
 
-    return res.send("Hello world tunado bolado no hatchiofly")
+    return res.render("create-point.html", { saved:true })
 })
 
 server.get("/search-results", (req, res) => {
 
+    const search = req.query.search
+
+    if(search == ""){
+        //Se a pesquisa for vazia
+        return res.render("search-results.html", { total: 0 })
+    }
+
     //Puxando os dados do banco
     db.all(`
-    SELECT * FROM places`, function (err, rows) {//rows para retornar uma lista com os registros
+    SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) {//rows para retornar uma lista com os registros
         if (err) {
             return console.log(err)
         }
