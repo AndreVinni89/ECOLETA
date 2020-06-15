@@ -1,7 +1,7 @@
 # ECOLETA
  Projeto desenvolvida na next level week da RocketSeat
  
- Projeto de um site com cadastro e visualização de ponto de coleta de lixo.
+ Projeto de um site com cadastro e visualização de pontos de coleta de lixo.
  
  Para o desenvolvimento foi utilizado no Front-End:
 - HTML
