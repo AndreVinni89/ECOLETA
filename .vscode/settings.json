@@ -8,21 +8,4 @@
       "vsicons.associations.files": [
         { "icon": "nunjucks", "extensions": ["html"], "format": "svg" }
     ],
-    "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#9cfbab",
-        "activityBar.activeBorder": "#9784fa",
-        "activityBar.background": "#9cfbab",
-        "activityBar.foreground": "#15202b",
-        "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#9784fa",
-        "activityBarBadge.foreground": "#15202b",
-        "statusBar.background": "#6bf981",
-        "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#3af757",
-        "titleBar.activeBackground": "#6bf981",
-        "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveBackground": "#6bf98199",
-        "titleBar.inactiveForeground": "#15202b99"
-    },
-    "peacock.color": "#6bf981",
 }
