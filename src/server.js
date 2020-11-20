@@ -105,4 +105,4 @@ server.get("/search-results", (req, res) => {
 })
 
 //Abrindo o server na porta 3000
-server.listen(3000)
+server.listen(4000)
